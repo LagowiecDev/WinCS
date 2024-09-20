@@ -7,7 +7,7 @@ using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SpicyFramework.Windows
+namespace WinCS
 {
     [DebuggerDisplay("{Value}")]
     public readonly struct HWND : IEquatable<HWND>

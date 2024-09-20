@@ -1,4 +1,4 @@
-﻿namespace SpicyFramework.Windows
+﻿namespace WinCS
 {
     public static partial class WindowStylesFlags
     {

@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SpicyFramework.Windows
+namespace WinCS
 {
     [DebuggerDisplay("{Value}")]
     public readonly struct LPCWSTR : IEquatable<LPCWSTR>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace SpicyFramework.Windows
+namespace WinCS
 {
     [StructLayout(LayoutKind.Sequential)]
     public struct WNDCLASS

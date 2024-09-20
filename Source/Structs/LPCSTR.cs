@@ -3,7 +3,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace SpicyFramework.Windows
+namespace WinCS
 {
     [DebuggerDisplay("{Value}")]
     public readonly struct LPCSTR : IEquatable<LPCSTR>

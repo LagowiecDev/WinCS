@@ -1,5 +1,5 @@
 ﻿#nullable enable
-using SpicyFramework.Windows;
+using WinCS;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SpicyFramework.Windows
+namespace WinCS
 {
     [DebuggerDisplay("{Value}")]
     public readonly struct HMODULE : IEquatable<HMODULE>

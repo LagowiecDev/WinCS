@@ -6,7 +6,7 @@ using System.Threading.Channels;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SpicyFramework.Windows
+namespace WinCS
 {
     public static partial class MessageBoxFlags
     {

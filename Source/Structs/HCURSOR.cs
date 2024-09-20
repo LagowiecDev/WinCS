@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SpicyFramework.Windows
+namespace WinCS
 {
     [DebuggerDisplay("{Handle}")]
     public readonly struct HCURSOR : IEquatable<HCURSOR>, IComparable<HCURSOR>

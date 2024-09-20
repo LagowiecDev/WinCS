@@ -2,7 +2,7 @@
 using System;
 using System.Diagnostics;
 
-namespace SpicyFramework.Windows
+namespace WinCS
 {
     [DebuggerDisplay("{Value}")]
     public readonly struct DWORD : IEquatable<DWORD>, IComparable<DWORD>
