@@ -1,4 +1,4 @@
-Sure! Here’s the updated documentation with the installation section included:
+Here’s the updated documentation with three installation options:
 
 ---
 
@@ -18,7 +18,7 @@ WinCS is a straightforward C# bindings library that provides direct access to es
 - **Structured API Calls:** Clearly defined method signatures that mirror the native API, making it easy to use for those familiar with Windows programming.
 
 **Installation:**
-To install WinCS, you have two options:
+You can install WinCS using one of the following methods:
 
 1. **Clone the GitHub Repository:**
    - Clone the repository directly from GitHub using the following command:
@@ -26,8 +26,14 @@ To install WinCS, you have two options:
      git clone https://github.com/LagowiecDev/WinCS.git
      ```
 
-2. **Download the Package:**
-   - Alternatively, visit the [GitHub repository](https://github.com/LagowiecDev/WinCS) and download the package as a ZIP file. Extract the contents and add the necessary references to your project.
+2. **Download as a ZIP:**
+   - Visit the [GitHub repository](https://github.com/LagowiecDev/WinCS) and download the package as a ZIP file. Extract the contents and add the necessary references to your project.
+
+3. **Download as a NuGet Package:**
+   - If available, you can download the NuGet package from the [releases section](https://github.com/LagowiecDev/WinCS/releases) of the GitHub repository. Install it via the NuGet Package Manager in Visual Studio or using the following command:
+     ```bash
+     dotnet add package WinCS
+     ```
 
 **Getting Started:**
 Once installed, use the bindings to call Windows API functions directly in your C# code.
