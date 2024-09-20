@@ -21,7 +21,7 @@ namespace SpicyFramework.Windows
 
         public static implicit operator IntPtr(HMENU value) => value.Value;
 
-        public static implicit operator HMENU(IntPtr value) => new(value);
+        public static implicit operator HMENU(IntPtr value) => new HMENU(value);
 
         public static bool operator ==(HMENU left, HMENU right) => left.Value == right.Value;
 

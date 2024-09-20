@@ -30,7 +30,7 @@ You can install WinCS using one of the following methods:
    - Visit the [GitHub repository](https://github.com/LagowiecDev/WinCS) and download the package as a ZIP file. Extract the contents and add the necessary references to your project.
 
 3. **Download as a NuGet Package:**
-   - If available, you can download the NuGet package from the [releases section](https://github.com/LagowiecDev/WinCS/releases) of the GitHub repository. Install it via the NuGet Package Manager in Visual Studio or using the following command:
+   - If available, you can download the NuGet package from the [releases section](https://github.com/LagowiecDev/WinCS/releases) of the GitHub repository. Install it via the [NuGet Package](https://www.nuget.org/packages/WinCS/) Manager in Visual Studio or using the following command:
      ```bash
      dotnet add package WinCS
      ```

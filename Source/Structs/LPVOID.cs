@@ -21,7 +21,7 @@ namespace SpicyFramework.Windows
 
         public static implicit operator IntPtr(LPVOID value) => value.Value;
 
-        public static implicit operator LPVOID(IntPtr value) => new(value);
+        public static implicit operator LPVOID(IntPtr value) => new LPVOID(value);
 
         public static bool operator ==(LPVOID left, LPVOID right) => left.Value == right.Value;
 

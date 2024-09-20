@@ -9,9 +9,16 @@ using System.Threading.Tasks;
 namespace SpicyFramework.Windows
 {
     [DebuggerDisplay("{Value}")]
-    public readonly struct HANDLE(IntPtr value) : IEquatable<HANDLE>
+    public readonly struct HANDLE: IEquatable<HANDLE>
     {
-        public readonly IntPtr Value = value;
+        private readonly IntPtr value;
+
+        public HANDLE(IntPtr value)
+        {
+            this.value = value;
+        }
+
+        public readonly IntPtr Value => value;
 
         public static HANDLE Null => default;
 
@@ -19,7 +26,7 @@ namespace SpicyFramework.Windows
 
         public static implicit operator IntPtr(HANDLE value) => value.Value;
 
-        public static implicit operator HANDLE(IntPtr value) => new(value);
+        public static implicit operator HANDLE(IntPtr value) => new HANDLE(value);
 
         public static bool operator ==(HANDLE left, HANDLE right) => left.Value == right.Value;
 

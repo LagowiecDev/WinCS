@@ -22,7 +22,7 @@ namespace SpicyFramework.Windows
 
         public static implicit operator IntPtr(HINSTANCE value) => value.Value;
 
-        public static implicit operator HINSTANCE(IntPtr value) => new(value);
+        public static implicit operator HINSTANCE(IntPtr value) => new HINSTANCE(value);
 
         public static bool operator ==(HINSTANCE left, HINSTANCE right) => left.Value == right.Value;
 
@@ -36,6 +36,6 @@ namespace SpicyFramework.Windows
 
         public override string ToString() => $"0x{Value:x}";
 
-        public static implicit operator HMODULE(HINSTANCE value) => new(value.Value);
+        public static implicit operator HMODULE(HINSTANCE value) => new HMODULE(value.Value);
     }
 }

@@ -1,7 +1,7 @@
 project "WinCS"
     kind "SharedLib"
     language "C#"
-    csversion "7.0"
+    csversion "8.0"
     targetdir "bin/%{cfg.buildcfg}"
     objdir "obj/%{cfg.buildcfg}"
 
