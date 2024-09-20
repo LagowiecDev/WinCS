@@ -1,7 +1,11 @@
+Sure! Here’s the updated documentation with the installation section included:
+
+---
+
 ### WinCS: C# Bindings for Windows API
 
 **Overview:**
-WinCS is a straightforward C# bindings library that provides direct access to essential Windows API functions from `user32.dll`, `kernel32.dll`, and other key Windows libraries. Designed for developers who want raw, unwrapped access to the native Windows functions, WinCS allows for efficient interaction with the Windows operating system.
+WinCS is a straightforward C# bindings library that provides direct access to essential Windows API functions from `user32.dll`, `kernel32.dll`, and other key Windows libraries. Designed for developers seeking raw, unwrapped access to native Windows functions, WinCS enables efficient interaction with the Windows operating system.
 
 **Key Features:**
 
@@ -9,12 +13,24 @@ WinCS is a straightforward C# bindings library that provides direct access to es
 
 - **Minimal Overhead:** Focused on performance and simplicity, providing direct bindings to Windows APIs for maximum efficiency.
 
-- **Comprehensive Coverage:** Includes a wide range of functions from key DLLs, enabling developers to utilize a variety of Windows functionalities.
+- **Comprehensive Coverage:** Includes a wide range of functions from key DLLs, allowing developers to utilize various Windows functionalities.
 
 - **Structured API Calls:** Clearly defined method signatures that mirror the native API, making it easy to use for those familiar with Windows programming.
 
+**Installation:**
+To install WinCS, you have two options:
+
+1. **Clone the GitHub Repository:**
+   - Clone the repository directly from GitHub using the following command:
+     ```bash
+     git clone https://github.com/LagowiecDev/WinCS.git
+     ```
+
+2. **Download the Package:**
+   - Alternatively, visit the [GitHub repository](https://github.com/LagowiecDev/WinCS) and download the package as a ZIP file. Extract the contents and add the necessary references to your project.
+
 **Getting Started:**
-Install the WinCS package via NuGet and reference it in your project. Use the bindings to call Windows API functions directly in your C# code.
+Once installed, use the bindings to call Windows API functions directly in your C# code.
 
 **Example Usage:**
 ```csharp
@@ -22,7 +38,7 @@ using WinCS;
 
 static class Program
 {
-    private LRESULT WindowProc(HWND hWnd, uint uMsg, WPARAM wParam, LPARAM lParam)
+    private static LRESULT WindowProc(HWND hWnd, uint uMsg, WPARAM wParam, LPARAM lParam)
     {
         switch (uMsg)
         {
@@ -31,7 +47,7 @@ static class Program
                 return 0;
 
             case WindowMessagesFlags.WM_CLOSE:
-                User32.DestroyWindow(_hWnd);
+                User32.DestroyWindow(hWnd);
                 break;
             // Handle other messages like WM_PAINT, WM_KEYDOWN, etc.
         }
@@ -45,11 +61,13 @@ static class Program
 
         HINSTANCE hInstance = Kernel32.GetModuleHandle(null);
 
-        WNDCLASS wc = new WNDCLASS();
-        wc.lpfnWndProc = WindowProc;
-        wc.lpszClassName = CLASS_NAME;
-        wc.hInstance = hInstance;
-        wc.style = WindowClassStylesFlags.CS_HREDRAW | WindowClassStylesFlags.CS_VREDRAW;
+        WNDCLASS wc = new WNDCLASS
+        {
+            lpfnWndProc = WindowProc,
+            lpszClassName = CLASS_NAME,
+            hInstance = hInstance,
+            style = WindowClassStylesFlags.CS_HREDRAW | WindowClassStylesFlags.CS_VREDRAW
+        };
 
         // Register the window class
         User32.RegisterClass(wc);
@@ -78,8 +96,4 @@ static class Program
 ```
 
 **Conclusion:**
-WinCS offers developers, efficient bindings to the Windows API, making it an ideal choice for those looking to work closely with the Windows operating system without the overhead of additional layers.
-
---- 
-
-Feel free to tweak any parts to better fit your vision!
+WinCS offers developers efficient bindings to the Windows API, making it an ideal choice for those looking to work closely with the Windows operating system without the overhead of additional layers.
